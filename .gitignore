@@ -1,0 +1,11 @@
+.idea
+vendor
+config/*
+!config/*.default
+**/.sass-cache
+composer.lock
+public/lib
+src/Entity/*~
+public/stylesheet/*.css
+public/javascript/built/*
+node_modules
