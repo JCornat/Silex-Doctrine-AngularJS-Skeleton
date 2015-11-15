@@ -2,10 +2,18 @@
 
     var app = angular.module('app.account.controller', []);
 
-    app.controller('AccountCtrl', ['$stateParams', '$state', function ($stateParams, $state) {
+    app.controller('accountCtrl', ['$stateParams', '$state', 'exampleService', function ($stateParams, $state, exampleService) {
         var self = this;
 
-        self.accountName = "John Doe";
+        self.name = "John Doe";
+
+        exampleService.getOne(1)
+            .success(function(data) {
+                self.example = data.data;
+            })
+            .error(function(data) {
+                console.log(data);
+            });
     }]);
 
 })();

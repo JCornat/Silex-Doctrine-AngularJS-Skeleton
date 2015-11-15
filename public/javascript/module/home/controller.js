@@ -2,7 +2,7 @@
 
     var app = angular.module('app.home.controller', []);
 
-    app.controller('HomeCtrl', ['$stateParams', '$state', function ($stateParams, $state) {
+    app.controller('homeCtrl', ['$stateParams', '$state', function ($stateParams, $state) {
         var self = this;
 
         self.account = function () {

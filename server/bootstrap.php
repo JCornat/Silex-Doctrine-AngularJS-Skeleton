@@ -5,7 +5,7 @@ require_once "vendor/autoload.php";
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-$paths = array("src/entity");
+$paths = array("src/Entity");
 $isDevMode = true;
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);

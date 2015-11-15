@@ -17,7 +17,7 @@ use Doctrine\ORM\Mapping;
  * @HasLifecycleCallbacks
  * @Table(name="example")
  */
-class Example
+class ExampleEntity
 {
     /**
      * @var integer
@@ -55,6 +55,20 @@ class Example
      * @Column(type="datetime", name="deleted_at", nullable=true)
      */
     protected $deletedAt;
+
+    /**
+     * @return string
+     */
+    public function toArray()
+    {
+        $object = [
+            'id' => $this->getId(),
+            'name' => $this->getName(),
+            'createdAt' => $this->getCreatedAt(),
+            'updatedAt' => $this->getUpdatedAt(),
+        ];
+        return json_encode($object);
+    }
 
     public function __construct()
     {
