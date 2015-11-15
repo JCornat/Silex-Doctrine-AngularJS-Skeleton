@@ -1,6 +1,6 @@
 (function () {
     var app = angular.module('app', [
-        'ui.router', 'ngSanitize',
+        'ui.router',
         'app.global.service', 'app.global.directive',
         'app.home.controller', 'app.account.controller'
     ]);
@@ -10,16 +10,17 @@
             .state('home', {
                 url: '/',
                 views: {
-                    '': {templateUrl: 'controller/global/view/home.html'}
+                    '': {templateUrl: 'template/home.html'}
                 }
             })
             .state('account', {
                 url: '/account',
                 views: {
-                    '': {templateUrl: 'controller/global/view/account.html'}
+                    '': {templateUrl: 'template/account.html'}
                 }
             });
-        $urlRouterProvider.otherwise('home');
+        $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/');
     }]);
 
     app.run([function() {

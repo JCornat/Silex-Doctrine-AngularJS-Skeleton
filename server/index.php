@@ -12,7 +12,6 @@ use \Application\Service\ExampleService;
 $app = new Silex\Application();
 $app['debug'] = true;
 $app->register(new Silex\Provider\ValidatorServiceProvider());
-$app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/public/template'));
 
 if (!defined('ROOT_PATH')) {
     define('ROOT_PATH', str_replace("/index.php", "", $_SERVER['SCRIPT_NAME']));
@@ -40,8 +39,9 @@ $api = $app['controllers_factory'];
 
 $api->get('/{id}', function(Request $request, Application $app, $id) {
     $service = new ExampleService($request, $app);
+    echo "AHAH";
     return $service->get($id);
-})->assert('id', '\d+')->before($checkId);
+});
 
 $app->mount('/api', $api);
 
@@ -59,6 +59,5 @@ $app->match('/{url}', function(Request $request, Application $app){
     $controller = new IndexController($request, $app);
     return $controller->index();
 })->assert('url', '.+');
-
 
 $app->run();

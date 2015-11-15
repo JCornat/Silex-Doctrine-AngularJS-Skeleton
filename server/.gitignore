@@ -1,0 +1,6 @@
+config/*
+!config/*.default
+vendor
+composer.lock
+
+src/Entity/*~

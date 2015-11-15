@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
 
-    var base = 'public/javascript/controller/';
-    var dest = 'public/javascript/built/';
-    var scss = 'public/stylesheet/scss/*.scss';
-    var css = 'public/stylesheet/';
+    var base = 'javascript/';
+    var dest = 'built/';
+    var scss = 'stylesheet/scss/*.scss';
+    var css = 'stylesheet/';
 
     grunt.initConfig({
         concat: {

@@ -2,8 +2,6 @@
   "require-dev": {
     "silex/silex": "2.0.*@dev",
     "doctrine/orm": "*",
-    "twig/twig": "2.0.*@dev",
-    "ircmaxell/password-compat": "dev-master",
     "symfony/translation": "3.0.*@dev",
     "symfony/validator": "3.0.*@dev",
     "gedmo/doctrine-extensions": "2.3.*@dev"

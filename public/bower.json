@@ -1,0 +1,12 @@
+{
+  "name": "Silex-Doctrine-AngularJS-Skeleton",
+  "version": "0.0.1",
+  "authors": [
+    "Jacques Cornat"
+  ],
+  "dependencies": {
+    "angular": "~1.4",
+    "jquery": "~2",
+    "angular-ui-router": "~0.2"
+  }
+}
